@@ -2,10 +2,12 @@
   "resources": [
     {"id":{"name":"obj_fish","path":"objects/obj_fish/obj_fish.yy",},"order":2,},
     {"id":{"name":"obj_boat","path":"objects/obj_boat/obj_boat.yy",},"order":0,},
-    {"id":{"name":"scr_textbox_functions","path":"scripts/scr_textbox_functions/scr_textbox_functions.yy",},"order":3,},
+    {"id":{"name":"textbox_functions","path":"scripts/textbox_functions/textbox_functions.yy",},"order":3,},
     {"id":{"name":"scr_game_script","path":"scripts/scr_game_script/scr_game_script.yy",},"order":2,},
+    {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},"order":0,},
     {"id":{"name":"rhythm elements","path":"notes/rhythm elements/rhythm elements.yy",},"order":1,},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},"order":1,},
+    {"id":{"name":"opt_results","path":"scripts/opt_results/opt_results.yy",},"order":5,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
     {"id":{"name":"tile_ui","path":"sprites/tile_ui/tile_ui.yy",},"order":0,},
     {"id":{"name":"Don't worry about this stuff","path":"notes/Don't worry about this stuff/Don't worry about this stuff.yy",},"order":4,},

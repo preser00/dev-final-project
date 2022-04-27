@@ -27,3 +27,5 @@ option[0] = "";
 option_link_id[0] = -1; 
 option_pos = 0; 
 option_count = 0; 
+
+setup = false; 
