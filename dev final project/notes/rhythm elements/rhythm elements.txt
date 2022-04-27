@@ -1,0 +1,23 @@
+- interval-based fishing, have to hold for at least 70-80% of interval to succeed
+
+- each rarity of fish has a different interval 
+- (backup plan) set interval for all fish, but the fish you get depends on the %
+of the interval you held for
+
+
+- audio-wise, if using different rarity intervals, choose a song with varying bpm
+- ^ otherwise use song with more consistent bpm
+
+
+- when you're about to get a bite, sound will slowly fade in to indicate presence of fish
+- sound gets to full volume + some visual indicator to show player should start pressing
+
+- player won't know how long the interval is, it's indicated by sound
+-- when interval is ending, sound will fade/bpm manipulation
+
+- player has to hold for majority of the interval to successfully get the fish 
+-- it will be possible to hold too long (and fail to fish up higher rarity fish) 
+-- or not hold long enough (and fail to fish up lower rarity fish)
+-- if you hold for way too short/long you'll miss most types of fish
+
+
