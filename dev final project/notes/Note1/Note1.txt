@@ -1,0 +1,22 @@
+most of the code will probably be based in the player? 
+
+player begins in static state, textbox appears saying "i should fish" 
+- will probably be popup style textboxes as in narr game clone 
+
+after button pressed, turns around 
+
+when catching fish, there will likely be a random number generated and then fed into a function that
+creates + assigns fish rarity + fish sprites
+
+things needed
+-placeholder sprites for player animations, fish, boat, water
+	- fish sprites go in the fish folder, since there'll be a lot 
+-placeholder sfx?? idk i usually add those at the end 
+
+
+
+
+this is just hypothetical 
+if we wanted to make a "fish catalog" i could look up and see if we could do something like an rpgmaker
+event map (is it called bitmapping??) where you can designate areas on a premade image that will do diff things
+when hovered/clicked
