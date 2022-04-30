@@ -1,7 +1,10 @@
 {
   "resources": [
+    {"id":{"name":"gm_main","path":"objects/gm_main/gm_main.yy",},"order":3,},
     {"id":{"name":"obj_fish","path":"objects/obj_fish/obj_fish.yy",},"order":2,},
+    {"id":{"name":"spr_fish1","path":"sprites/spr_fish1/spr_fish1.yy",},"order":0,},
     {"id":{"name":"obj_boat","path":"objects/obj_boat/obj_boat.yy",},"order":0,},
+    {"id":{"name":"spr_boat","path":"sprites/spr_boat/spr_boat.yy",},"order":3,},
     {"id":{"name":"textbox_functions","path":"scripts/textbox_functions/textbox_functions.yy",},"order":3,},
     {"id":{"name":"scr_game_script","path":"scripts/scr_game_script/scr_game_script.yy",},"order":2,},
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},"order":0,},
@@ -10,6 +13,7 @@
     {"id":{"name":"opt_results","path":"scripts/opt_results/opt_results.yy",},"order":5,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
     {"id":{"name":"tile_ui","path":"sprites/tile_ui/tile_ui.yy",},"order":0,},
+    {"id":{"name":"spr_player_idle3","path":"sprites/spr_player_idle3/spr_player_idle3.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
@@ -52,6 +56,7 @@
     {"folderPath":"folders/Extensions.yy","order":13,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/fish sprites.yy","order":2,"resourceVersion":"1.0","name":"fish sprites","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/dialogue.yy","order":14,"resourceVersion":"1.0","name":"dialogue","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/backup.yy","order":15,"resourceVersion":"1.0","name":"backup","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

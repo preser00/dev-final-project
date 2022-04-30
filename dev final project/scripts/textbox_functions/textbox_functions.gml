@@ -28,8 +28,8 @@ function create_textbox(_x, _y, _text_id) {
 		
 		with instance_create_layer(0, 0, "text", obj_textbox) {
 			scr_game_script(_text_id); 
-			box_x = _x - 150; 
-			box_y = _y; 
+			box_x = _x - 150 - 30; 
+			box_y = _y - 60; 
 		}
 		
 	}

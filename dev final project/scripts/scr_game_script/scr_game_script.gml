@@ -9,7 +9,8 @@ switch _text_id {
 	
 	//example 
 	case "game start":
-	scr_text("I should start fishing soon... \n(Press Space)");
+	scr_text("I should start fishing soon... \n(Press Z)");
+	scr_text("Today's quota is any number of fish worth 500 coins total."); 
 	
 }
 
