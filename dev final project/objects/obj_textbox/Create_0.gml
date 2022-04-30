@@ -1,7 +1,10 @@
 depth = -9999; 
 
 box_width = 300; 
-box_height = 180; 
+box_height = 120; 
+
+box_x = room_width/2; 
+box_y = room_height-box_height; 
 
 buffer = 10; 
 line_width = box_width - buffer*2; 

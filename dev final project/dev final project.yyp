@@ -10,7 +10,6 @@
     {"id":{"name":"opt_results","path":"scripts/opt_results/opt_results.yy",},"order":5,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
     {"id":{"name":"tile_ui","path":"sprites/tile_ui/tile_ui.yy",},"order":0,},
-    {"id":{"name":"Don't worry about this stuff","path":"notes/Don't worry about this stuff/Don't worry about this stuff.yy",},"order":4,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},

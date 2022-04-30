@@ -1,8 +1,5 @@
 confirm_key = keyboard_check_released(ord("Z"));
 
-box_x = room_width/2; 
-box_y = room_height-box_height; 
-
 if !setup {
 	draw_set_font(fnt_main); 
 	draw_set_valign(fa_top); 
