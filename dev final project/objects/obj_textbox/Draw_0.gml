@@ -1,4 +1,4 @@
-confirm_key = keyboard_check_released(ord("Z"));
+confirm_key = keyboard_check_released(global.confirm_key); 
 
 if !setup {
 	draw_set_font(fnt_main); 
@@ -45,6 +45,7 @@ if confirm_key {
 			}
 			
 			instance_destroy();
+			global.game_paused = false; 
 			
 		}
 	}

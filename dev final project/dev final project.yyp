@@ -15,7 +15,9 @@
     {"id":{"name":"tile_ui","path":"sprites/tile_ui/tile_ui.yy",},"order":0,},
     {"id":{"name":"spr_player_idle3","path":"sprites/spr_player_idle3/spr_player_idle3.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
+    {"id":{"name":"create_fish","path":"scripts/create_fish/create_fish.yy",},"order":0,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
+    {"id":{"name":"spr_player_waiting","path":"sprites/spr_player_waiting/spr_player_waiting.yy",},"order":4,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [

@@ -3,6 +3,7 @@ boat = instance_create_layer(player.x, player.y + player.sprite_height/2, "Insta
 
 global.money = 0; 
 global.game_paused = false; 
+global.confirm_key = ord("Z"); //this can be changed later 
 
 enum state {
 	idle, 
@@ -11,4 +12,8 @@ enum state {
 	results
 }
 
+global.state = state.idle; 
 
+timer = 0; 
+current_fish_rarity = 0; 
+fish_timer = 0; 
