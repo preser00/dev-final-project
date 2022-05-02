@@ -1,0 +1,3 @@
+beat = false;
+bar = false;
+
