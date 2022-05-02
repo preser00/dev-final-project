@@ -8,8 +8,8 @@ function opt_results(_option_id){
 		break; 
 		
 		case "example - no":
-			show_debug_message("you refused"); 
-			break; 
+		show_debug_message("you refused"); 
+		break; 
 		
 	}
 	

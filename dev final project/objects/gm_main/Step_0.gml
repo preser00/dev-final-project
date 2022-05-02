@@ -10,7 +10,7 @@ switch global.state {
 		
 		player.sprite_index = spr_player_idle; 
 		
-		if keyboard_check_released(global.confirm_key) {
+		if keyboard_check_pressed(global.confirm_key) {
 			global.state = state.waiting; 
 			player.sprite_index = spr_player_throwing; 
 		}
@@ -24,7 +24,7 @@ switch global.state {
 		if wait_timer == 0 {
 			
 			//wait_timer = random_range(5, 10)*room_speed; 
-			wait_timer = 5; 
+			wait_timer = room_speed; //for faster testing
 			
 			show_debug_message(string(current_fish_rarity) + " " + string(wait_timer/room_speed)); 
 			
@@ -50,8 +50,11 @@ switch global.state {
 				
 				fish_timer = (.5 + 1/current_fish_rarity)*room_speed;
 				
+				//use visual/audio to alert player
 				alert = instance_create_layer(player.x+player.sprite_width/2+sprite_get_width(spr_alert)/2+20, player.y-50, "Instances", obj_alert)
 				
+				timer = 0; 
+				wait_timer = 0; 
 				global.state = state.fishing; 
 				
 			}
@@ -96,14 +99,24 @@ switch global.state {
 	
 	case state.results:
 		
-		if catch_results = 1 {
+		show_debug_message(catch_results); 
+		
+		if catch_results == 1 {
 			
+			//create obj here and change the create textbox used 
+			
+			create_textbox(player.textbox_x, player.textbox_y, "success"); 
 			change_sprite_to(spr_player_success);
 			
-		}
-		else if catch_results = 0 {
+			//global.state = state.idle; 
 			
+		}
+		else if catch_results == 0 {
+			
+			create_textbox(player.textbox_x, player.textbox_y, "fail"); 
 			change_sprite_to(spr_player_fail); 
+			
+			global.state = state.idle; 
 			
 		}
 		

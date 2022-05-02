@@ -1,0 +1,1 @@
+- change wait timer back to random
