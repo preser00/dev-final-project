@@ -6,17 +6,17 @@ function create_fish(_x, _y, _rarity){
 		
 		rarity = _rarity; 
 		
+		//if there are several fish of each rarity the code can be added later
 		if rarity == 1 { //common
-			//change sprite
 			fish_sprite = spr_fish1; 
 			worth = 20; 
 		}
 		else if rarity == 2 { //uncommon
-			//change sprite
+			fish_sprite = spr_fish2; 
 			worth = 50; 
 		}
 		else if rarity == 3 { //rare
-			//change sprite
+			fish_sprite = spr_fish3; 
 			worth = 100; 
 		}
 		
