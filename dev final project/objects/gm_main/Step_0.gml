@@ -22,11 +22,9 @@ switch global.state {
 		change_player_sprite(spr_player_waiting); 
 	
 		if wait_timer == 0 {
-			
-			//wait_timer = random_range(5, 10)*room_speed; 
-			wait_timer = room_speed; //for faster testing
-			
-			show_debug_message(string(current_fish_rarity) + " " + string(wait_timer/room_speed)); 
+			audio_play_sound(snd_small_splash, 0, false); 
+			wait_timer = random_range(3, 5)*room_speed; 
+			//wait_timer = room_speed; //for faster testing
 			
 		}
 		else {
@@ -150,6 +148,7 @@ switch global.state {
 				} 
 				if(pressedtime > 1.47){
 					fishtype = 3
+					audio_play_sound(snd_fail, 0, false); 
 					global.state = state.fail;
 		
 				}
@@ -213,7 +212,7 @@ switch global.state {
 			}
 			else {
 				
-				//MONEY SFX HERE
+				audio_play_sound(snd_coin, 0, false); 
 				global.money += fish.worth; 
 				instance_destroy(fish); 
 				

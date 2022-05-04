@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_thrown.wav",
+  "soundFile": "snd_small_splash.wav",
   "duration": 2.080542,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_thrown",
+  "name": "snd_small_splash",
   "tags": [],
   "resourceType": "GMSound",
 }
