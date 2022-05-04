@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "bgm_main.mp3",
-  "duration": 628.639954,
+  "soundFile": "bgm_end.mp3",
+  "duration": 196.048981,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bgm_main",
+  "name": "bgm_end",
   "tags": [],
   "resourceType": "GMSound",
 }

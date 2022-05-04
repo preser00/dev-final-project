@@ -34,6 +34,7 @@
     {"id":{"name":"tile_ui","path":"sprites/tile_ui/tile_ui.yy",},"order":0,},
     {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"order":10,},
     {"id":{"name":"spr_player_idle3","path":"sprites/spr_player_idle3/spr_player_idle3.yy",},"order":0,},
+    {"id":{"name":"bgm_end","path":"sounds/bgm_end/bgm_end.yy",},"order":10,},
     {"id":{"name":"cleanup","path":"notes/cleanup/cleanup.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
     {"id":{"name":"create_fish","path":"scripts/create_fish/create_fish.yy",},"order":0,},
