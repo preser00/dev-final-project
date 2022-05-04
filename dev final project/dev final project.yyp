@@ -20,7 +20,6 @@
     {"id":{"name":"rhythm elements","path":"notes/rhythm elements/rhythm elements.yy",},"order":1,},
     {"id":{"name":"snd_coin","path":"sounds/snd_coin/snd_coin.yy",},"order":1,},
     {"id":{"name":"gm_main_test","path":"objects/gm_main_test/gm_main_test.yy",},"order":9,},
-    {"id":{"name":"bgm_main","path":"sounds/bgm_main/bgm_main.yy",},"order":9,},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},"order":1,},
     {"id":{"name":"opt_results","path":"scripts/opt_results/opt_results.yy",},"order":5,},
     {"id":{"name":"obj_alert","path":"objects/obj_alert/obj_alert.yy",},"order":2,},
