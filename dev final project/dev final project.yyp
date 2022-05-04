@@ -66,9 +66,9 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"room_start","path":"rooms/room_start/room_start.yy",},},
     {"roomId":{"name":"room_end","path":"rooms/room_end/room_end.yy",},},
+    {"roomId":{"name":"room_start","path":"rooms/room_start/room_start.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

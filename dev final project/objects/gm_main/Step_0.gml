@@ -57,6 +57,7 @@ switch global.state {
 				
 				timer = 0; 
 				wait_timer = 0; 
+				audio_sound_gain(bgm_main,0,2000)
 				global.state = state.fishing; 
 				
 			}
@@ -92,7 +93,7 @@ switch global.state {
 		//	global.state = state.fail; 
 			
 		//}
-		
+			
 			if(turn == 0){
 				if(firsttime){
 					music = audio_play_sound(track, 1, true);
