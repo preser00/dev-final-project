@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Song info
 track = mus_test_170_3;
-bpm = 82;
+bpm = 41;
 beats_per_bar = 4;
 
 // Internal variables
@@ -28,3 +29,11 @@ time = get_timer();
 
 interval = false
 intervaltime = 0
+pressedtime_start = 0
+pressedtime = 0; 
+//intervalnumber = 0; 
+//previous_intervalnumber = 0;
+evaluation = 0;
+fishtype = 0 ; 
+startcounting = false; 
+

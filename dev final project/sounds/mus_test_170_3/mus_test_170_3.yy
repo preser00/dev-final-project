@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_test_170_3.mp3",
-  "duration": 62.4849,
+  "duration": 125.045334,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
