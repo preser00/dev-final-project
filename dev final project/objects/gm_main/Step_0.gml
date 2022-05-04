@@ -158,7 +158,7 @@ switch global.state {
 				//show_debug_message("pressedtime:"+string(pressedtime - pressedtime_start)+ "evaluation:" + string(evaluation))
 				//show_debug_message("pressedtime:"+string(pressedtime_start)+ "intervaltime:" + string(intervaltime))
 			}
-			show_debug_message(current_fish_rarity)
+			show_debug_message(intervaltime)
 			if(startcounting == true){
 				pressedtime += 1/room_speed
 			} else {
