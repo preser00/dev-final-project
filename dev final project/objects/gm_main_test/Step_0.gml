@@ -141,13 +141,13 @@ if(keyboard_check_released(vk_space)){
 		global.state = state.fail;
 		
 	}
-	show_debug_message(fishtype)
+	
 	audio_pause_sound(track)
 	turn += 1
 	//show_debug_message("pressedtime:"+string(pressedtime - pressedtime_start)+ "evaluation:" + string(evaluation))
 	//show_debug_message("pressedtime:"+string(pressedtime_start)+ "intervaltime:" + string(intervaltime))
 }
-
+show_debug_message(turn)
 if(startcounting == true){
 	pressedtime += 1/room_speed
 } else {
@@ -208,12 +208,42 @@ pos_mod_bar_prev = pos_mod_bar;
 	
 	case state.success:
 	
-		change_player_sprite(spr_player_success); 
+		player.sprite_index = spr_player_success; 
+		
+		if !fish_displayed {
+			fish = create_fish(player.x, player.y, current_fish_rarity); 
+			fish_displayed = true; 
+		}
+		else {
+			if fish.image_xscale > 0 {
+			
+				fish.image_xscale -= .1; 
+				fish.image_yscale -= .1; 
+			
+			}
+			else {
+				
+				//MONEY SFX HERE
+				global.money += fish.worth; 
+				instance_destroy(fish); 
+				
+				//reset fishing related variables
+				fish_displayed = false; 
+				
+				global.state = state.idle; 
+			}
+		}
 	
 	break;
 	
 	case state.fail:
-	
+		
+		player.sprite_index = spr_player_fail; 
+		
+		create_textbox("fail"); 
+		
+		global.state = state.idle; 
+		
 	break; 
 	
 }

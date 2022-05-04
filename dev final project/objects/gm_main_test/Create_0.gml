@@ -26,6 +26,7 @@ wait_timer = 0;
 //catch_results = 2; //0 = fail, 1 = success, 2 = currently not applicable 
 
 fish_timer = 0; 
+fish_displayed = false; 
 
 //rhythm part
 // Song info
