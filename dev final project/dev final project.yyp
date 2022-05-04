@@ -35,6 +35,7 @@
     {"id":{"name":"create_fish","path":"scripts/create_fish/create_fish.yy",},"order":0,},
     {"id":{"name":"spr_fish2","path":"sprites/spr_fish2/spr_fish2.yy",},"order":1,},
     {"id":{"name":"spr_player_fail","path":"sprites/spr_player_fail/spr_player_fail.yy",},"order":9,},
+    {"id":{"name":"snd_alert","path":"sounds/snd_alert/snd_alert.yy",},"order":8,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"snd_fail","path":"sounds/snd_fail/snd_fail.yy",},"order":4,},
     {"id":{"name":"spr_player_waiting","path":"sprites/spr_player_waiting/spr_player_waiting.yy",},"order":4,},
