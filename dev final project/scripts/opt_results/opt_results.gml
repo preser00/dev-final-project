@@ -11,6 +11,14 @@ function opt_results(_option_id){
 		show_debug_message("you refused"); 
 		break; 
 		
+		case "end - game end":
+		room_goto(room_end); 
+		break;
+		
+		case "end - game continue": 
+		global.times_continued_fishing++; 
+		break; 
+		
 	}
 	
 }

@@ -4,6 +4,10 @@ if instance_exists(obj_textbox){
 
 if !global.game_paused {
 	
+	if global.money >= global.win_amount {
+		create_textbox("game end"); 
+	}
+	
 switch global.state {
 		
 	case state.idle:
@@ -197,7 +201,9 @@ switch global.state {
 	break; 
 	
 	case state.success:
-	
+		
+		audio_sound_gain(bgm_main, .4, 1000); 
+		
 		player.sprite_index = spr_player_success; 
 		
 		if !fish_displayed {
@@ -232,6 +238,8 @@ switch global.state {
 	break;
 	
 	case state.fail:
+		
+		audio_sound_gain(bgm_main, .4, 1000); 
 		
 		player.sprite_index = spr_player_fail; 
 		

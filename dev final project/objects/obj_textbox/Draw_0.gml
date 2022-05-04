@@ -44,9 +44,14 @@ if confirm_key {
 				
 			}
 			
-			instance_destroy();
 			global.game_paused = false; 
 			
+			if global.money > global.win_amount {		
+				audio_play_sound(snd_small_splash, 0, false); 
+				room_goto(room_end); 
+			}
+			
+			instance_destroy();
 		}
 	}
 	
@@ -75,9 +80,45 @@ draw_sprite_ext(
 	0, c_white, 1
 );
 
-/***options code would go here but we're not using it for now 
-so i won't be adding it to save time***/
+/***option selecting***/
+//******options to select if any******//
+if char_index == text_lengths[page] && page == page_count - 1 {
+	
+	//option selection
+	option_pos += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+	option_pos = clamp(option_pos, 0, option_count-1);
+	
+	//for drawing options
+	var _op_space = 30;
+	var _op_border = 6;
+	for(var op = 0; op < option_count; op++) {
+		//the option box
+		var _op_width = string_width(option[op]) + _op_border*2;
+		
+		draw_sprite_ext(
+			box_sprite, box_frame_index, 
+			_textbox_x + 16, _textbox_y - _op_space*option_count + _op_space*op, //draws options starting from top 
+			_op_width/box_sprite_w, (_op_space - 2)/box_sprite_h,
+			0, c_white, 1);
+		
+		//the option arrow
+		//if loop we're on is same as option position, then we can draw arrow
+		if option_pos == op {
+			draw_sprite(spr_option_selected, 0, _textbox_x, _textbox_y - _op_space*option_count + _op_space*op); 
+		}
+		
+		//the option text
+		draw_text(
+			_textbox_x + 16 + _op_border, 
+			_textbox_y - _op_space*option_count + _op_space*op + 2,
+			option[op]); 
+	}
+	
+	
+	
+}
 
+/***drawing the text***/
 var text_to_draw = string_copy(text[page], 1, char_index); 
 
 draw_text_ext(

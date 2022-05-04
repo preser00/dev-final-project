@@ -23,7 +23,7 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_7E705E8F","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7E705E8F","path":"rooms/room_main/room_main.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -51,7 +51,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Room1",
+  "name": "room_main",
   "tags": [],
   "resourceType": "GMRoom",
 }

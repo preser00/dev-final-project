@@ -4,6 +4,9 @@ boat = instance_create_layer(player.x, player.y, "Instances", obj_boat);
 create_textbox("game start");
 
 global.money = 0; 
+global.win_amount = 700;
+global.times_continued_fishing = 1; 
+
 global.game_paused = false; 
 global.confirm_key = vk_space; //this can be changed later 
 
