@@ -93,38 +93,44 @@ switch global.state {
 	
 	break; 
 	
-	//case state.results:
-		
-	//	show_debug_message(catch_results); 
-		
-	//	if catch_results == 1 {
-			
-	//		//create obj here and change the create textbox used 
-		
-	//		create_textbox(player.textbox_x, player.textbox_y, "success"); 
-	//		change_player_sprite(spr_player_success);	
-			
-			
-	//	}
-	//	else if catch_results == 0 {
-			
-	//		create_textbox(player.textbox_x, player.textbox_y, "fail"); 
-	//		change_player_sprite(spr_player_fail); 
-			
-	//		global.state = state.idle; 
-			
-	//	}
-		
-	//break;
-	
 	case state.success:
 	
-		change_player_sprite(spr_player_success); 
+		player.sprite_index = spr_player_success; 
+		
+		if !fish_displayed {
+			fish = create_fish(player.x, player.y, current_fish_rarity); 
+			fish_displayed = true; 
+		}
+		else {
+			if fish.image_xscale > 0 {
+			
+				fish.image_xscale -= .1; 
+				fish.image_yscale -= .1; 
+			
+			}
+			else {
+				
+				//MONEY SFX HERE
+				global.money += fish.worth; 
+				instance_destroy(fish); 
+				
+				//reset fishing related variables
+				fish_displayed = false; 
+				
+				global.state = state.idle; 
+			}
+		}
 	
 	break;
 	
 	case state.fail:
-	
+		
+		player.sprite_index = spr_player_fail; 
+		
+		create_textbox("fail"); 
+		
+		global.state = state.idle; 
+		
 	break; 
 	
 }

@@ -12,13 +12,13 @@ switch _text_id {
 	scr_text("Today's quota is any number of fish worth 500 coins total."); 
 	break; 
 	
-	case "success": 
-	scr_text("I caught the fish"); //change this later 
-	break; 
-	
 	case "fail": 
 	scr_text("The fish got away..."); 
 	scr_text("I'll get the next one."); 
+	break; 
+	
+	case "test": 
+	scr_text("test box"); 
 	break; 
 	
 }

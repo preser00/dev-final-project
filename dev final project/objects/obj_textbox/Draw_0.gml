@@ -58,8 +58,8 @@ if confirm_key {
 }
 
 /***drawing the textbox***/ 
-var _textbox_x = box_x + text_x_offset[page]; 
-var _textbox_y = box_y; 
+var _textbox_x = global.box_x + text_x_offset[page]; 
+var _textbox_y = global.box_y; 
 
 box_frame_index += box_frame_rate; 
 box_sprite_w = sprite_get_width(box_sprite); 

@@ -1,10 +1,11 @@
+global.game_paused = true; 
 depth = -9999; 
 
 box_width = room_width-200; 
 box_height = 100; 
 
-box_x = 0; 
-box_y = room_height-box_height; 
+global.box_x = 0; 
+global.box_y = room_height-box_height; 
 
 buffer = 10; 
 line_width = box_width - buffer*2; 

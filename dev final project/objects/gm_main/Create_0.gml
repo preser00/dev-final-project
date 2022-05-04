@@ -1,9 +1,6 @@
 player = instance_create_layer(room_width/2, room_height*(4/7), "Instances", obj_player); 
 boat = instance_create_layer(player.x, player.y + player.sprite_height/2, "Instances", obj_boat); 
 
-//textbox_x = room_width/2-100;
-//textbox_y = player.y+player.sprite_height/2+100;
-
 create_textbox("game start");
 
 global.money = 0; 
@@ -26,3 +23,5 @@ wait_timer = 0;
 //catch_results = 2; //0 = fail, 1 = success, 2 = currently not applicable 
 
 fish_timer = 0; 
+
+fish_displayed = false; 
