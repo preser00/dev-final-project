@@ -201,6 +201,11 @@ switch global.state {
 		
 		if !fish_displayed {
 			fish = create_fish(player.x, player.y, current_fish_rarity); 
+			
+			textbox = instance_create_layer(global.box_x, global.box_y, "Text", obj_textbox);
+			textbox.text[0] = "I caught a " + fish.fish_name + "."; 
+			textbox.page_count++; 
+			
 			fish_displayed = true; 
 		}
 		else {
