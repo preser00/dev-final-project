@@ -19,7 +19,7 @@ function scr_option(_option, _link_id){
 }
 
 //@param string text_id, the id that will be used to retrieve text sequences
-function create_textbox(_x, _y, _text_id) {
+function create_textbox(_text_id) {
 	
 	if _text_id == "" {
 		//nothing happens, no textbox is created
@@ -28,8 +28,6 @@ function create_textbox(_x, _y, _text_id) {
 		
 		with instance_create_layer(0, 0, "text", obj_textbox) {
 			scr_game_script(_text_id); 
-			box_x = _x - 150 - 30; 
-			box_y = _y - 60; 
 		}
 		
 	}

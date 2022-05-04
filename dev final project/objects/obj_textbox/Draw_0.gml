@@ -40,7 +40,7 @@ if confirm_key {
 				
 				opt_results(option_link_id[option_pos]);
 				//audio_play_sound(snd_option_select, 0, false);
-				create_textbox(box_x, box_y, option_link_id[option_pos]); 
+				create_textbox(option_link_id[option_pos]); 
 				
 			}
 			

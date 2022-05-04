@@ -1,9 +1,9 @@
 depth = -9999; 
 
-box_width = 300; 
-box_height = 120; 
+box_width = room_width-200; 
+box_height = 100; 
 
-box_x = room_width/2; 
+box_x = 0; 
 box_y = room_height-box_height; 
 
 buffer = 10; 
