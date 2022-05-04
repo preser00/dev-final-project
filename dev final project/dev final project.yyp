@@ -14,6 +14,7 @@
     {"id":{"name":"textbox_functions","path":"scripts/textbox_functions/textbox_functions.yy",},"order":3,},
     {"id":{"name":"scr_game_script","path":"scripts/scr_game_script/scr_game_script.yy",},"order":2,},
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},"order":0,},
+    {"id":{"name":"bgm_main","path":"sounds/bgm_main/bgm_main.yy",},"order":9,},
     {"id":{"name":"snd_small_splash","path":"sounds/snd_small_splash/snd_small_splash.yy",},"order":3,},
     {"id":{"name":"snd_success","path":"sounds/snd_success/snd_success.yy",},"order":2,},
     {"id":{"name":"prnt_bobber","path":"objects/prnt_bobber/prnt_bobber.yy",},"order":8,},
