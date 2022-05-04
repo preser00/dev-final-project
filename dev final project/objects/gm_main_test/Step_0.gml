@@ -18,7 +18,7 @@ switch global.state {
 	break; 
 	
 	case state.waiting:
-	
+		firsttime = true
 		change_player_sprite(spr_player_waiting); 
 	
 		if wait_timer == 0 {
@@ -26,7 +26,7 @@ switch global.state {
 			//wait_timer = random_range(5, 10)*room_speed; 
 			wait_timer = room_speed; //for faster testing
 			
-			show_debug_message(string(current_fish_rarity) + " " + string(wait_timer/room_speed)); 
+			//show_debug_message(string(current_fish_rarity) + " " + string(wait_timer/room_speed)); 
 			
 		}
 		else {
@@ -66,32 +66,119 @@ switch global.state {
 	
 	case state.fishing: //this doesn't include the rhythm element 
 		
-		if fish_timer > 0 {
+		//if fish_timer > 0 {
 			
-			fish_timer--; 
+		//	fish_timer--; 
 			
-			if keyboard_check_released(global.confirm_key) {
+		//	if keyboard_check_released(global.confirm_key) {
 				
-				show_debug_message("pressed"); 
+		//		show_debug_message("pressed"); 
 				
-				player.sprite_index = spr_player_reeling; 
+		//		instance_destroy(alert); 
+		//		//catch_results = 1; 
 				
-				//successfully get fish 
-				catch_results = 1; 
+		//		global.state = state.success; 
 				
-				instance_destroy(alert); 
-				
-			}
+		//	}
 			
+		//}
+		//else {
+			
+		//	//fish gets away
+		//	instance_destroy(alert); 
+		//	//catch_results = 0; 
+		//	global.state = state.fail; 
+			
+		//}
+	//firsttime entering this state
+	if(turn == 0){
+	if(firsttime){
+		music = audio_play_sound(track, 1, true);
+
+	position = audio_sound_get_track_position(music);
+	firsttime = false
+	}
+	} 
+	if(turn > 0){
+		audio_resume_sound(track)
+	}
+
+		//adding rhythm
+		time = get_timer();
+position = audio_sound_get_track_position(music)*1000;
+
+pos_mod_beat = position mod mspb;
+pos_mod_bar = position mod mspbar;
+
+
+if(interval == true){
+if(keyboard_check_pressed(vk_space)){
+	
+	pressedtime = intervaltime
+	pressedtime_start = intervaltime
+	startcounting = true
+	}
+}
+if(keyboard_check_released(vk_space)){
+	startcounting = false
+	evaluation = (pressedtime - pressedtime_start)/1.47
+	if(pressedtime <= 1.47){
+		if(evaluation < 1 && evaluation >0.6){
+			fishtype = 3
+			global.state = state.success;
 		}
-		else {
-			
-			//fish gets away
-			catch_results = 0; 
-			
-			instance_destroy(alert); 
-			
+				if(evaluation <= 0.6 && evaluation >0.3){
+			fishtype = 2
+			global.state = state.success;
 		}
+				if(evaluation <= 0.3 && evaluation > 0 ){
+			fishtype = 1
+			global.state = state.success;
+		}
+	} 
+	if(pressedtime > 1.47){
+		fishtype = 3
+		global.state = state.fail;
+		
+	}
+	show_debug_message(fishtype)
+	audio_pause_sound(track)
+	turn += 1
+	//show_debug_message("pressedtime:"+string(pressedtime - pressedtime_start)+ "evaluation:" + string(evaluation))
+	//show_debug_message("pressedtime:"+string(pressedtime_start)+ "intervaltime:" + string(intervaltime))
+}
+
+if(startcounting == true){
+	pressedtime += 1/room_speed
+} else {
+	pressedtime = pressedtime
+}
+
+
+
+if(pos_mod_bar < pos_mod_bar_prev) {
+  bar = true;
+  alarm[0] = 4;
+  intervaltime = 0
+  //intervalnumber += 1
+  pos_mod_beat_max = pos_mod_beat;
+} 
+
+if(pos_mod_beat < pos_mod_beat_prev) {
+  beat = true;
+  interval = false
+  intervaltime = 0
+  //intervalnumber += 1
+  alarm[0] = 4;
+  pos_mod_beat_max = pos_mod_beat;
+} else {
+	interval = true
+	intervaltime += 1/room_speed
+}
+
+//previous_intervalnumber = intervalnumber
+pos_mod_beat_prev = pos_mod_beat;
+pos_mod_bar_prev = pos_mod_bar;
 	
 	break; 
 	
@@ -102,11 +189,10 @@ switch global.state {
 	//	if catch_results == 1 {
 			
 	//		//create obj here and change the create textbox used 
-			
+		
 	//		create_textbox(player.textbox_x, player.textbox_y, "success"); 
-	//		change_player_sprite(spr_player_success);
+	//		change_player_sprite(spr_player_success);	
 			
-	//		//global.state = state.idle; 
 			
 	//	}
 	//	else if catch_results == 0 {
@@ -119,6 +205,16 @@ switch global.state {
 	//	}
 		
 	//break;
+	
+	case state.success:
+	
+		change_player_sprite(spr_player_success); 
+	
+	break;
+	
+	case state.fail:
+	
+	break; 
 	
 }
 	
