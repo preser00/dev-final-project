@@ -36,22 +36,27 @@ switch global.state {
 			if timer > wait_timer {
 				
 				//generate a fish w/ weighted percentages
-				var i = irandom_range(1, 100); 
+				//var i = irandom_range(1, 100); 
+				
+				if current_fish_rarity = 5 {
+					
+					var i = 100; 
 			
-				if i < 50 {
-					current_fish_rarity = 1; 
-				}
-				else if 50 < i < 90 {
-					current_fish_rarity = 2; 
-				}
-				else {
-					current_fish_rarity = 3; 
+					if i < 50 {
+						current_fish_rarity = 0; 
+					}
+					else if 50 < i < 90 {
+						current_fish_rarity = 1; 
+					}
+					else {
+						current_fish_rarity = 2; 
+					}
 				}
 				
 				fish_timer = (.5 + 1/current_fish_rarity)*room_speed;
 				
 				//use visual/audio to alert player
-				alert = instance_create_layer(player.x+player.sprite_width/2+sprite_get_width(spr_alert)/2+20, player.y-50, "Instances", obj_alert)
+				alert = instance_create_layer(player.x+player.sprite_width/2+sprite_get_width(spr_alert)/2+20, player.y-player.sprite_height/2-50, "Instances", obj_alert)
 				
 				timer = 0; 
 				wait_timer = 0; 
@@ -117,7 +122,7 @@ switch global.state {
 				//reset fishing related variables
 				fish_displayed = false; 
 				
-				global.state = state.idle; 
+				global.state = state.waiting; 
 			}
 		}
 	
@@ -129,7 +134,7 @@ switch global.state {
 		
 		create_textbox("fail"); 
 		
-		global.state = state.idle; 
+		global.state = state.waiting; 
 		
 	break; 
 	

@@ -13,8 +13,7 @@ switch _text_id {
 	break; 
 	
 	case "fail": 
-	scr_text("The fish got away..."); 
-	scr_text("I'll get the next one."); 
+	scr_text("The fish got away... I'll get the next one."); 
 	break; 
 	
 	case "test": 
