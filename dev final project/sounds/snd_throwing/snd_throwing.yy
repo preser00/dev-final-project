@@ -14,8 +14,8 @@
   "soundFile": "snd_throwing.mp3",
   "duration": 0.341333,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "backup",
+    "path": "folders/backup.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_throwing",

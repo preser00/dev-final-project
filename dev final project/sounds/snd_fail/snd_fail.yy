@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_big_splash.mp3",
-  "duration": 1.877333,
+  "soundFile": "snd_fail.wav",
+  "duration": 0.341333,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_big_splash",
+  "name": "snd_fail",
   "tags": [],
   "resourceType": "GMSound",
 }
