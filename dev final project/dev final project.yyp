@@ -1,10 +1,9 @@
 {
   "resources": [
     {"id":{"name":"mus_test_170_3","path":"sounds/mus_test_170_3/mus_test_170_3.yy",},"order":1,},
-    {"id":{"name":"change_sprite_to","path":"scripts/change_sprite_to/change_sprite_to.yy",},"order":1,},
+    {"id":{"name":"change_player_sprite","path":"scripts/change_player_sprite/change_player_sprite.yy",},"order":1,},
     {"id":{"name":"gm_main","path":"objects/gm_main/gm_main.yy",},"order":3,},
     {"id":{"name":"obj_fish","path":"objects/obj_fish/obj_fish.yy",},"order":2,},
-    {"id":{"name":"spr_player_reeling","path":"sprites/spr_player_reeling/spr_player_reeling.yy",},"order":6,},
     {"id":{"name":"spr_fish1","path":"sprites/spr_fish1/spr_fish1.yy",},"order":0,},
     {"id":{"name":"spr_alert","path":"sprites/spr_alert/spr_alert.yy",},"order":8,},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":6,},

@@ -19,7 +19,7 @@ switch global.state {
 	
 	case state.waiting:
 	
-		change_sprite_to(spr_player_waiting); 
+		change_player_sprite(spr_player_waiting); 
 	
 		if wait_timer == 0 {
 			
@@ -74,13 +74,10 @@ switch global.state {
 				
 				show_debug_message("pressed"); 
 				
-				player.sprite_index = spr_player_reeling; 
-				
-				//successfully get fish 
-				catch_results = 1; 
-				
 				instance_destroy(alert); 
-				global.state = state.results; 
+				//catch_results = 1; 
+				
+				global.state = state.success; 
 				
 			}
 			
@@ -88,39 +85,47 @@ switch global.state {
 		else {
 			
 			//fish gets away
-			catch_results = 0; 
-			
 			instance_destroy(alert); 
-			global.state = state.results; 
+			//catch_results = 0; 
+			global.state = state.fail; 
 			
 		}
 	
 	break; 
 	
-	case state.results:
+	//case state.results:
 		
-		show_debug_message(catch_results); 
+	//	show_debug_message(catch_results); 
 		
-		if catch_results == 1 {
+	//	if catch_results == 1 {
 			
-			//create obj here and change the create textbox used 
-			
-			create_textbox(player.textbox_x, player.textbox_y, "success"); 
-			change_sprite_to(spr_player_success);
-			
-			//global.state = state.idle; 
-			
-		}
-		else if catch_results == 0 {
-			
-			create_textbox(player.textbox_x, player.textbox_y, "fail"); 
-			change_sprite_to(spr_player_fail); 
-			
-			global.state = state.idle; 
-			
-		}
+	//		//create obj here and change the create textbox used 
 		
+	//		create_textbox(player.textbox_x, player.textbox_y, "success"); 
+	//		change_player_sprite(spr_player_success);	
+			
+			
+	//	}
+	//	else if catch_results == 0 {
+			
+	//		create_textbox(player.textbox_x, player.textbox_y, "fail"); 
+	//		change_player_sprite(spr_player_fail); 
+			
+	//		global.state = state.idle; 
+			
+	//	}
+		
+	//break;
+	
+	case state.success:
+	
+		change_player_sprite(spr_player_success); 
+	
 	break;
+	
+	case state.fail:
+	
+	break; 
 	
 }
 	

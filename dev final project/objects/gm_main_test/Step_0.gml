@@ -19,7 +19,7 @@ switch global.state {
 	
 	case state.waiting:
 	
-		change_sprite_to(spr_player_waiting); 
+		change_player_sprite(spr_player_waiting); 
 	
 		if wait_timer == 0 {
 			
@@ -80,7 +80,6 @@ switch global.state {
 				catch_results = 1; 
 				
 				instance_destroy(alert); 
-				global.state = state.results; 
 				
 			}
 			
@@ -91,36 +90,35 @@ switch global.state {
 			catch_results = 0; 
 			
 			instance_destroy(alert); 
-			global.state = state.results; 
 			
 		}
 	
 	break; 
 	
-	case state.results:
+	//case state.results:
 		
-		show_debug_message(catch_results); 
+	//	show_debug_message(catch_results); 
 		
-		if catch_results == 1 {
+	//	if catch_results == 1 {
 			
-			//create obj here and change the create textbox used 
+	//		//create obj here and change the create textbox used 
 			
-			create_textbox(player.textbox_x, player.textbox_y, "success"); 
-			change_sprite_to(spr_player_success);
+	//		create_textbox(player.textbox_x, player.textbox_y, "success"); 
+	//		change_player_sprite(spr_player_success);
 			
-			//global.state = state.idle; 
+	//		//global.state = state.idle; 
 			
-		}
-		else if catch_results == 0 {
+	//	}
+	//	else if catch_results == 0 {
 			
-			create_textbox(player.textbox_x, player.textbox_y, "fail"); 
-			change_sprite_to(spr_player_fail); 
+	//		create_textbox(player.textbox_x, player.textbox_y, "fail"); 
+	//		change_player_sprite(spr_player_fail); 
 			
-			global.state = state.idle; 
+	//		global.state = state.idle; 
 			
-		}
+	//	}
 		
-	break;
+	//break;
 	
 }
 	

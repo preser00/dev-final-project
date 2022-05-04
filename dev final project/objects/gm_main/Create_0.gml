@@ -9,7 +9,8 @@ enum state {
 	idle, 
 	waiting,
 	fishing,
-	results
+	success,
+	fail
 }
 
 global.state = state.idle; 
@@ -17,6 +18,6 @@ global.state = state.idle;
 timer = 0; 
 current_fish_rarity = 0; 
 wait_timer = 0; 
-catch_results = 2; //0 = fail, 1 = success, 2 = currently not applicable 
+//catch_results = 2; //0 = fail, 1 = success, 2 = currently not applicable 
 
 fish_timer = 0; 
