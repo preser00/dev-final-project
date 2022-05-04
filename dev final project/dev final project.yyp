@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"snd_wind","path":"sounds/snd_wind/snd_wind.yy",},"order":7,},
     {"id":{"name":"mus_test_170_3","path":"sounds/mus_test_170_3/mus_test_170_3.yy",},"order":1,},
     {"id":{"name":"bob","path":"scripts/bob/bob.yy",},"order":2,},
     {"id":{"name":"change_player_sprite","path":"scripts/change_player_sprite/change_player_sprite.yy",},"order":1,},
