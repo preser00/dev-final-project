@@ -53,7 +53,7 @@ switch global.state {
 				
 				//fish_timer = (.5 + 1/current_fish_rarity)*room_speed;
 				
-				alert = instance_create_layer(player.x+player.sprite_width/2+sprite_get_width(spr_alert)/2+20, player.y-player.sprite_height/2-50, "Instances", obj_alert)
+				//instance_create_layer(player.x+player.sprite_width/2+sprite_get_width(spr_alert)/2+20, player.y-player.sprite_height/2-50, "Instances", obj_alert)
 				
 				timer = 0; 
 				wait_timer = 0; 
@@ -117,7 +117,7 @@ switch global.state {
 			if(keyboard_check_pressed(vk_space)){
 				
 				if instance_exists(obj_alert) {
-					instance_destroy(alert); 
+					instance_destroy(obj_alert); 
 				}
 				
 				pressedtime = intervaltime

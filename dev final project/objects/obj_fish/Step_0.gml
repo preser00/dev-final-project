@@ -5,3 +5,6 @@ if !reached_exhibit {
 		reached_exhibit = true; 
 	}
 }
+else {
+	//event_inherited(); 
+}

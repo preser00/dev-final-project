@@ -8,16 +8,14 @@ switch _text_id {
 	break;
 	
 	case "game start":
-	scr_text("I should start fishing soon... \n(Press Z)");
+	scr_text("I should start fishing soon... \n(SPACE is my most important key.)");
 	scr_text("Today's quota is any number of fish worth 500 coins total."); 
+	scr_text("As usual, when I hear the music, I need to pull..."); 
+	scr_text("... If my pulling doesn't match up to the music's rhythm, then the fish will be swept away."); 
 	break; 
 	
 	case "fail": 
 	scr_text("The fish got away... I'll get the next one."); 
-	break; 
-	
-	case "test": 
-	scr_text("test box"); 
 	break; 
 	
 }

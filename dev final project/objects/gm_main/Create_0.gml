@@ -5,7 +5,7 @@ create_textbox("game start");
 
 global.money = 0; 
 global.game_paused = false; 
-global.confirm_key = ord("Z"); //this can be changed later 
+global.confirm_key = vk_space; //this can be changed later 
 
 enum state {
 	idle, 

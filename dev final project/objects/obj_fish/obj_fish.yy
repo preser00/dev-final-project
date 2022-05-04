@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "prnt_bobber",
+    "path": "objects/prnt_bobber/prnt_bobber.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
