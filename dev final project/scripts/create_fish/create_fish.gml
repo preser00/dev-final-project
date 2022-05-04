@@ -3,7 +3,10 @@
 function create_fish(_x, _y, _rarity){
 	
 	fish =  instance_create_layer(_x, _y, "Instances", obj_fish); 
-	fish.rarity = _rarity; 
+	
+	fish.worth = fish.fish_worths[_rarity]; 
+	fish.fish_name = fish.fish_names[_rarity]
+	fish.sprite_index = fish.fish_sprites[_rarity]; 
 	
 	return fish; 
 	
