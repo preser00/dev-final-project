@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fish1",
-    "path": "sprites/spr_fish1/spr_fish1.yy",
+    "name": "spr_candyfish",
+    "path": "sprites/spr_candyfish/spr_candyfish.yy",
   },
   "solid": false,
   "visible": true,

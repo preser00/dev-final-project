@@ -27,7 +27,7 @@ switch global.state {
 	
 		if wait_timer == 0 {
 			audio_play_sound(snd_small_splash, 0, false); 
-			wait_timer = random_range(3, 5)*room_speed; 
+			wait_timer = random_range(5, 10)*room_speed; 
 			//wait_timer = room_speed; //for faster testing
 			
 		}

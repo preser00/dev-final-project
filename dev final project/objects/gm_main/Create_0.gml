@@ -5,10 +5,10 @@ create_textbox("game start");
 
 global.money = 0; 
 global.win_amount = 700;
-global.times_continued_fishing = 1; 
+//global.times_continued_fishing = 1; 
 
 global.game_paused = false; 
-global.confirm_key = vk_space; //this can be changed later 
+global.confirm_key = vk_space; 
 
 enum state {
 	idle, 
@@ -23,13 +23,12 @@ global.state = state.idle;
 timer = 0; 
 current_fish_rarity = 5; 
 wait_timer = 0; 
-//catch_results = 2; //0 = fail, 1 = success, 2 = currently not applicable 
 
 fish_timer = 0; 
 
 fish_displayed = false; 
 
-/****************************rhythm part**********************/
+/***rhythm part***/
 // Song info
 track = mus_test_170_3;
 bpm = 41;

@@ -46,7 +46,7 @@ if confirm_key {
 			
 			global.game_paused = false; 
 			
-			if global.money > global.win_amount {		
+			if global.money >= global.win_amount {		
 				audio_play_sound(snd_small_splash, 0, false); 
 				room_goto(room_end); 
 			}
