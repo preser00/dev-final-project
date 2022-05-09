@@ -5,6 +5,7 @@ if instance_exists(obj_textbox){
 if !global.game_paused {
 	
 	if global.money >= global.win_amount {
+		
 		create_textbox("game end"); 
 	}
 	
@@ -14,20 +15,24 @@ switch global.state {
 		
 		player.sprite_index = spr_player_idle; 
 		
-		if keyboard_check_pressed(global.confirm_key) {
-			global.state = state.waiting; 
-			player.sprite_index = spr_player_throwing; 
-		}
+		//if keyboard_check_pressed(global.confirm_key) {
+		//	global.state = state.waiting; 
+		//	//player.sprite_index = spr_player_throwing; 
+		//}
 		
 	break; 
 	
 	case state.waiting:
-	
-		change_player_sprite(spr_player_waiting); 
+
+ 
+		change_player_sprite(spr_player_idle); 
+							success = true
+		fail = true
+		throwing = true
 	
 		if wait_timer == 0 {
 			audio_play_sound(snd_small_splash, 0, false); 
-			wait_timer = random_range(5, 10)*room_speed; 
+			wait_timer = random_range(2, 4)*room_speed; 
 			//wait_timer = room_speed; //for faster testing
 			
 		}
@@ -97,7 +102,7 @@ switch global.state {
 		//	global.state = state.fail; 
 			
 		//}
-			
+
 			if(turn == 0){
 				if(firsttime){
 					music = audio_play_sound(track, 1, true);
@@ -116,10 +121,16 @@ switch global.state {
 
 			pos_mod_beat = position mod mspb;
 			pos_mod_bar = position mod mspbar;
-
+			if(startcounting == true){
+				change_player_sprite(spr_player_waiting); 
+			}
 
 			if(interval == true){
 			if(keyboard_check_pressed(vk_space)){
+				if(throwing == true){
+					change_player_sprite(spr_player_throwing); 
+					throwing = false
+				}
 				
 				if instance_exists(obj_alert) {
 					instance_destroy(obj_alert); 
@@ -135,17 +146,17 @@ switch global.state {
 				evaluation = (pressedtime - pressedtime_start)/1.47
 				if(pressedtime <= 1.47){
 					
-					if(evaluation < 1 && evaluation >0.6){
+					if(evaluation < 1 && evaluation >0.75){
 						current_fish_rarity = 2
 						audio_play_sound(snd_success, 0, false); 
 						global.state = state.success;
 					}
-							if(evaluation <= 0.6 && evaluation >0.3){
+							if(evaluation <= 0.75 && evaluation >0.4){
 						current_fish_rarity = 1
 						audio_play_sound(snd_success, 0, false); 
 						global.state = state.success;
 					}
-							if(evaluation <= 0.3 && evaluation > 0 ){
+							if(evaluation <= 0.4 && evaluation > 0 ){
 						current_fish_rarity = 0
 						audio_play_sound(snd_success, 0, false); 
 						global.state = state.success;
@@ -160,10 +171,11 @@ switch global.state {
 	
 				audio_pause_sound(track)
 				turn += 1
+				show_debug_message(evaluation)
 				//show_debug_message("pressedtime:"+string(pressedtime - pressedtime_start)+ "evaluation:" + string(evaluation))
 				//show_debug_message("pressedtime:"+string(pressedtime_start)+ "intervaltime:" + string(intervaltime))
 			}
-			show_debug_message(current_fish_rarity)
+			
 			if(startcounting == true){
 				pressedtime += 1/room_speed
 			} else {
@@ -203,9 +215,15 @@ switch global.state {
 	case state.success:
 		
 		audio_sound_gain(bgm_main, .4, 1000); 
-		
+		if(success == true){
 		player.sprite_index = spr_player_success; 
-		
+		alarm_set(2,1.25*room_speed)
+		success = false
+		} 
+		if(success == false){
+		change_player_sprite(spr_player_success_idle);    
+		}
+
 		if !fish_displayed {
 			fish = create_fish(player.x, player.y, current_fish_rarity); 
 			
@@ -241,7 +259,14 @@ switch global.state {
 		
 		audio_sound_gain(bgm_main, .4, 1000); 
 		
-		player.sprite_index = spr_player_fail; 
+		if(fail == true){
+		change_player_sprite(spr_player_fail); 
+		alarm_set(1,1.2*room_speed)
+		fail = false
+		} 
+
+
+		
 		
 		create_textbox("fail"); 
 		
@@ -252,3 +277,11 @@ switch global.state {
 }
 	
 }
+
+//				if (player.image_speed > 0)
+//{
+//    if (player.image_index >= player.image_number - 1) {
+//		player.image_speed = 0
+//	};
+//}
+

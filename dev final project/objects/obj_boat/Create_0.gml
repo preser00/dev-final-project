@@ -1,3 +1,4 @@
+depth = 10
 event_inherited(); 
 
 bobbing = false; 
