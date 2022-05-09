@@ -146,12 +146,12 @@ switch global.state {
 				evaluation = (pressedtime - pressedtime_start)/1.47
 				if(pressedtime <= 1.47){
 					
-					if(evaluation < 1 && evaluation >0.75){
+					if(evaluation < 1 && evaluation >0.7){
 						current_fish_rarity = 2
 						audio_play_sound(snd_success, 0, false); 
 						global.state = state.success;
 					}
-							if(evaluation <= 0.75 && evaluation >0.4){
+							if(evaluation <= 0.7 && evaluation >0.4){
 						current_fish_rarity = 1
 						audio_play_sound(snd_success, 0, false); 
 						global.state = state.success;
